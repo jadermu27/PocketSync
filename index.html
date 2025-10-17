@@ -7,16 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>Categorias</li>
-                <li>Vinculos</li>
-                <li>Acerca de</li>
+    <nav class="stylesheet">
+        <div class="nav__container">
+            <a href="#" class="nav__logo">Misitio</a>
+
+            <button class="nav__toggle" id="navToggle">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </button>
+
+            <ul class="nav__menu" id="navMenu">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Servicios</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Contacto</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Log In</a>
+                </li>
             </ul>
-        </nav>
-    </header>
-    <h1>PocketSync</h1>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1>Contenido Principal</h1>
+        <p>Bienvenido a la página principal de PocketSync. Aquí encontrarás toda la información que necesitas.</p>
+    </main>
     
+    <script src="script.js"></script>
 </body>
 </html>

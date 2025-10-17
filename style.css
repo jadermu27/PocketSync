@@ -1,0 +1,170 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #537cd3;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #212121;
+}
+
+/* Estilos para la página de inicio de sesión */
+
+.Container-inicioSesion {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #dedcdc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333333;
+}
+
+.Container-inicioSesion form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.Container-inicioSesion label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #212121;
+    align-self: flex-start;
+    margin-left: 20%;
+    font-size: 1.1em;
+}
+
+.Container-inicioSesion input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 60%;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    text-align: center;
+}
+
+.Container-inicioSesion button {
+    padding: 9px;
+    background-color: #2272c8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    width: 50%;
+    transition: background-color 0.3s;
+}
+
+.Container-inicioSesion button a {
+    color: white;
+    text-decoration: none;
+}
+
+.Container-inicioSesion button:hover {
+    background-color: #1a5fae;
+}
+
+
+/* Estilos para la página de registro*/
+
+.Container-Registro {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #dedcdc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333333;
+}
+
+.Container-Registro form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.Container-Registro label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #212121;
+    align-self: flex-start;
+    margin-left: 20%;
+    font-size: 1.1em;
+}
+
+.Container-Registro input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 60%;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    text-align: center;
+}
+
+.Container-Registro button {
+    padding: 9px;
+    background-color: #2272c8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    width: 50%;
+    transition: background-color 0.3s;
+}
+
+.Container-Registro button a {
+    color: white;
+    text-decoration: none;
+}
+
+.Container-Registro button:hover {
+    background-color: #1a5fae;
+}
+
+/* Estilos para la página principal */
+
+/* Estilos para la barra de navegación */
+
+header {
+    background-color: #fcfcfc;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin: 0;
+    padding: 15px 20px;
+}
+
+nav ul li {
+    font-size: 1.2em;
+    color: #212121;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav ul li:hover {
+    color: #2272c8;
+}
+

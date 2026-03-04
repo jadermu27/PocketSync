@@ -3,12 +3,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 
 // Importar las páginas
-import grupos from "./pages/grupos/Grupos";
+import Grupos from "./pages/grupos/Grupos";
 import Inicio from "./pages/inicio/Inicio";
-import iniciosesion from "./pages/iniciosesion/Iniciosesion";
-import modificarperfil from "./pages/modificarperfil/Modificarperfil";
-import registro from "./pages/registro/Registro";
-import reportes from "./pages/reportes/Reportes";
+import InicioSesion from "./pages/iniciosesion/Iniciosesion";
+import ModificarPerfil from "./pages/modificarperfil/Modificarperfil";
+import Registro from "./pages/registro/Registro";
+import Reportes from "./pages/reportes/Reportes";
 
 
 function App() {

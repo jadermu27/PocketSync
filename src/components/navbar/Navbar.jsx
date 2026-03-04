@@ -15,7 +15,7 @@ const Navbar = () => {
             <li><a href="#portafolio">Perfil</a></li>
             <li>
                 <a href="#login" className="login-btn">
-                    Login
+                    Nuevo Gasto
                 </a>
                 
             </li>

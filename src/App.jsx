@@ -28,7 +28,6 @@ function App() {
           <Route path="/reportes" element={<Reportes />} />
         </Routes>
 
-        <h1>Bienvenido a PocketSync</h1>
       </div>
     </BrowserRouter>
   );

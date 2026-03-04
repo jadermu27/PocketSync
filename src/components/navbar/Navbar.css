@@ -7,7 +7,7 @@
     left: 0;
     top: 0;
     height: 100vh; /* Ocupa toda la altura de la pantalla */
-    width: 200px; /* Ancho fijo para la barra lateral */
+    width: 180px; /* Ancho fijo para la barra lateral */
     padding: 20px;
     background-color: #004858;
     color: white;
@@ -24,7 +24,7 @@
     flex-direction: column; /* Asegura que los enlaces estén en columna */
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 160px 25px;
     gap: 1rem; /* Espacio entre los enlaces */
 }
 

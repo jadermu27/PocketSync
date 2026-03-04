@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // Importante: esto habilita la navegación
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ onAbrirGasto }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -15,7 +15,9 @@ const Navbar = () => {
         <li><Link to="/grupos">Grupos</Link></li>
         <li><Link to="/perfil">Perfil</Link></li>
         <li>
-          <Link to="/iniciosesion" className="login-btn">Nuevo Gasto</Link>
+          <button onClick={onAbrirGasto} className="login-btn">
+            Nuevo Gasto
+          </button>
         </li>
       </ul>
     </nav>

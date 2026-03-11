@@ -9,7 +9,7 @@ const Navbar = ({ onAbrirGasto }) => {
         🔥 PocketSync
       </div>
       <ul className="navbar-links">
-        {/* El 'to' debe ser igual al 'path' que pusiste en App.jsx */}
+        {/* El 'to' debe ser igual al 'path' que hay en App.jsx */}
         <li><Link to="/">Inicio</Link></li>
         <li><Link to="/reportes">Reportes</Link></li>
         <li><Link to="/grupos">Grupos</Link></li>

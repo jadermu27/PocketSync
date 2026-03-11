@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 // Importar componentes
 import Navbar from "./components/navbar/Navbar";
@@ -13,32 +13,44 @@ import ModificarPerfil from "./pages/modificarperfil/Modificarperfil";
 import Registro from "./pages/registro/Registro";
 import Reportes from "./pages/reportes/Reportes";
 
-
-function App() {
-
+// 1. CREAMOS UN COMPONENTE HIJO PARA LA LÓGICA
+function AppContent() {
   const [ModalAbierto, setModalAbierto] = useState(false);
+  const location = useLocation(); // Ahora sí funcionará porque está dentro del Router
+
+  // Definimos las rutas donde NO queremos el Navbar
+  const ocultarNavbar = ["/", "/registro"].includes(location.pathname);
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        {/*El Navbar se queda fijo en todas las pantallas */}
+    <div className="App">
+      {/* 2. RENDERIZADO CONDICIONAL: Si NO es ruta de ocultar, muestra el Navbar */}
+      {!ocultarNavbar && (
         <Navbar onAbrirGasto={() => setModalAbierto(true)} />
-        <RegistrarGasto 
+      )}
+
+      <RegistrarGasto 
         isOpen={ModalAbierto} 
         onClose={() => setModalAbierto(false)} 
-        />
+      />
 
-        <Routes>
-          {/* Aquí definimos qué componente se muestra según la URL */}
-          <Route path="/" element={<Inicio />} />
-          <Route path="/grupos" element={<Grupos />} />
-          <Route path="/nuevogasto" element={<InicioSesion />} />
-          <Route path="/perfil" element={<ModificarPerfil />} />
-          <Route path="/registro" element={<Registro />} />
-          <Route path="/reportes" element={<Reportes />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<InicioSesion />} />
+        <Route path="/inicio" element={<Inicio />} />
+        <Route path="/grupos" element={<Grupos />} />
+        <Route path="/nuevogasto" element={<InicioSesion />} />
+        <Route path="/perfil" element={<ModificarPerfil />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/reportes" element={<Reportes />} />
+      </Routes>
+    </div>
+  );
+}
 
-      </div>
+// 3. COMPONENTE PRINCIPAL QUE ENVUELVE TODO
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }

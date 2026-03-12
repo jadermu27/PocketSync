@@ -1,0 +1,106 @@
+.Registro-container {
+    background-color: #004858;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden; /* Evita scroll innecesario */
+}
+    
+
+
+.Registro-container h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-family: sans-serif;
+}
+
+.Registro-form-container {
+    background-color: #c2c2c2;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 450px; /* Limita el ancho máximo del formulario */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.Registro-form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #000;
+}
+
+.Registro-Usuario, .Registro-Correo, .Registro-Contraseña {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.Registro-Usuario label, .Registro-Correo label, .Registro-Contraseña label {
+   font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+
+}
+
+.Registro-Usuario input, .Registro-Correo input, .Registro-Contraseña input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #ffffff; /* Blanco puro para que se vea el texto */
+    color: #000000;            /* Texto negro al escribir */
+    margin-top: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.Registro-Usuario input:focus, .Registro-Correo input:focus, .Registro-Contraseña input:focus {
+  box-shadow: 0 4px 8px rgba(0, 72, 88, 0.3); /* Sombra azulada sutil */
+}
+
+.Registro-form button {
+    background-color: #004858;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+    margin: 10px auto 0;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.Registro-form button:hover {
+    background-color: #003642;
+}
+
+.iniciosesion-texto {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.iniciosesion-link {
+    color: #2b16d1;
+    cursor: pointer;
+    text-decoration: none;
+}
+

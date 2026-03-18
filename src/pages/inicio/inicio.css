@@ -1,18 +1,33 @@
 .inicio-page-container {
-  margin-left: 180px; /* Margen exacto para tu Navbar lateral */
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 1fr 350px; /* La parte izquierda crece, la derecha es fija */
-  gap: 40px;
-  align-items: start;
+  /* Forzamos a que ignore cualquier instrucción de centrado del padre */
+  margin: 0 !important;
+  display: flex !important; /* Cambiamos de grid a flex para más control */
+  flex-direction: row;
+  justify-content: flex-start; /* Todo a la izquierda */
+  align-items: flex-start;    /* Todo arriba */
+  
+  width: 100% !important;
+  padding: 40px 20px 20px 50px !important; /* Arriba, Derecha, Abajo, Izquierda (50px separa de la barra) */
+  box-sizing: border-box;
   background-color: #ffffff;
-  min-height: 100vh;
+}
+
+/* Añade esta clase para los widgets de la derecha si no la tenías */
+.side-widgets-column {
+  width: 350px;
+  margin-left: 30px; /* Separación entre contenido y notificaciones */
+}
+
+.info-widget-card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
 }
 
 .main-content-flow {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  flex: 1; /* Esto hace que el balance use todo el espacio restante */
+  max-width: 900px; /* Para que el balance no se estire al infinito en pantallas gigantes */
 }
 
 .welcome-title {
@@ -83,4 +98,14 @@
   align-items: center;
   gap: 15px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 20px;       /* Espacio a los lados */
+  padding-bottom: 30px; /* Espacio extra abajo para que no se salga de la página */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }

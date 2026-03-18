@@ -1,82 +1,105 @@
 .sidebar {
-  width: 250px;
-  background-color: #0b4c55; /* El color oscuro del mockup */
-  color: white;
+  width: 260px;
+  height: 100vh;
+  background-color: #004d4d; /* El color verde de tu captura */
+  position: fixed;    /* LA CLAVE: se queda fija aunque hagas scroll */
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  height: 100vh;
-  position: sticky;
-  top: 0;
+  padding: 20px 0;
+  z-index: 1000;      /* Para que siempre esté por encima del contenido */
 }
 
-.sidebar-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 40px;
-}
-
-.sidebar-menu {
-  list-style: none;
-  padding: 0;
-  flex-grow: 1;
-}
-
-.menu-item {
+/* Estilo de los items del menú */
+.nav-item {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 12px 15px;
-  cursor: pointer;
-  border-radius: 8px;
-  margin-bottom: 5px;
+  background: none;
+  border: none;
   color: #a0c4c9;
-  transition: 0.3s;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 5px;
+  width: 100%;
 }
 
-.menu-item.active, .menu-item:hover {
+.nav-item.active {
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
 }
 
-.btn-nuevo-gasto {
-  background-color: #ff8c00; /* Naranja del botón */
-  border: none;
+/* Botón naranja de Nuevo Gasto */
+.btn-nuevo-gasto-sidebar {
+  width: 100%;
+  background-color: #f06400;
   color: white;
-  padding: 15px;
+  border: none;
+  padding: 12px;
   border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.main-content {
+  margin-left: 260px; /* Ancho de la sidebar */
+  width: calc(100% - 260px); 
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Esto centrará "Bienvenido a PocketSync" y las tarjetas */
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Esto centra los botones horizontalmente */
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-nuevo-gasto-sidebar {
+  width: 100%;           /* Ocupa el ancho disponible del padding */
+  max-width: 200px;      /* Limita el ancho para que no toque los bordes */
+  background-color: #f06400; /* Color naranja del mockup */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;   /* Botón redondeado */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   font-weight: bold;
   cursor: pointer;
-  margin: 20px 0;
+  transition: transform 0.2s;
 }
 
-.user-profile {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 10px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.user-profile img {
-  border-radius: 50%;
-  width: 35px;
+.btn-nuevo-gasto-sidebar:hover {
+  transform: scale(1.05);
 }
 
 .btn-logout {
-  width: 100%;
-  background: white;
-  color: #0b4c55;
+  width: 100%;         /* Ahora mide lo mismo que el de arriba */
+  background-color: #1a1a1a; /* Negro del mockup */
+  color: white;
   border: none;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 12px;
+  border-radius: 25px; /* Redondeado igual al otro botón */
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: #333333;
 }

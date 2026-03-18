@@ -233,3 +233,19 @@
 
 ul { list-style: none; padding: 0; }
 li { padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+
+/* Esto asegura que el contenedor no tenga márgenes invisibles */
+html, body, #root, .App {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow-x: hidden; /* Elimina la barra de scroll de abajo */
+}
+
+/* Forzamos a que el contenido empiece en el borde de la sidebar */
+.main-content-wrapper {
+  margin-left: 260px !important; /* Ancho de tu barra verde */
+  width: calc(100% - 260px) !important;
+  display: block !important; /* IMPORTANTE: Block quita el centrado de Flexbox */
+  text-align: left !important;
+}

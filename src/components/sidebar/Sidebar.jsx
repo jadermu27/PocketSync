@@ -1,45 +1,50 @@
 import React from 'react';
-import { Home, PieChart, Users, LogOut, Plus } from 'lucide-react'; // Librería de iconos
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Home, BarChart2, Users, Plus, User } from 'lucide-react';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ onAbrirGasto }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const menuItems = [
+    { name: 'Inicio', path: '/inicio', icon: <Home size={22} /> },
+    { name: 'Reportes', path: '/reportes', icon: <BarChart2 size={22} /> },
+    { name: 'Grupos', path: '/grupos', icon: <Users size={22} /> },
+    { name: 'Perfil', path: '/perfil', icon: <User size={22} /> },
+  ];
+
   return (
-    <nav className="sidebar">
+    <aside className="sidebar">
       <div className="sidebar-logo">
-        <span className="logo-icon">🔥</span>
-        <h2>PocketSync</h2>
+        <h2>🔥PocketSync</h2>
       </div>
 
-      <ul className="sidebar-menu">
-        <li className="menu-item">
-          <Home size={20} />
-          <span>Inicio</span>
-        </li>
-        <li className="menu-item active">
-          <PieChart size={20} />
-          <span>Reportes</span>
-        </li>
-        <li className="menu-item">
-          <Users size={20} />
-          <span>Grupos</span>
-        </li>
-      </ul>
+      <nav className="sidebar-nav">
+        {menuItems.map((item) => (
+          <button
+            key={item.name}
+            className={`nav-item ${location.pathname === item.path ? 'active' : ''}`}
+            onClick={() => navigate(item.path)}
+          >
+            {item.icon}
+            <span>{item.name}</span>
+          </button>
+        ))}
+      </nav>
 
-      <button className="btn-nuevo-gasto">
-        <Plus size={20} />
-        <span>Nuevo Gasto</span>
-      </button>
-
+      {/* Sección inferior actualizada */}
       <div className="sidebar-footer">
-        <div className="user-profile">
-          <img src="https://via.placeholder.com/40" alt="User" />
-          <span>Miguel Vanegas</span>
-        </div>
-        <button className="btn-logout">
+        <button className="btn-nuevo-gasto-sidebar" onClick={onAbrirGasto}>
+          <Plus size={20} />
+          <span>Nuevo Gasto</span>
+        </button>
+
+        <button className="btn-logout" onClick={() => navigate('/')}>
           Cerrar Sesión
         </button>
       </div>
-    </nav>
+    </aside>
   );
 };
 

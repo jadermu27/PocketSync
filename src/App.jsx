@@ -12,6 +12,7 @@ import InicioSesion from "./pages/iniciosesion/Iniciosesion";
 import ModificarPerfil from "./pages/modificarperfil/Modificarperfil";
 import Registro from "./pages/registro/Registro";
 import Reportes from "./pages/reportes/Reportes";
+import Sidebar from './components/sidebar/Sidebar';
 
 // 1. CREAMOS UN COMPONENTE HIJO PARA LA LÓGICA
 function AppContent() {

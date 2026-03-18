@@ -1,0 +1,82 @@
+.sidebar {
+  width: 250px;
+  background-color: #0b4c55; /* El color oscuro del mockup */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  color: #a0c4c9;
+  transition: 0.3s;
+}
+
+.menu-item.active, .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.btn-nuevo-gasto {
+  background-color: #ff8c00; /* Naranja del botón */
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.user-profile {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.user-profile img {
+  border-radius: 50%;
+  width: 35px;
+}
+
+.btn-logout {
+  width: 100%;
+  background: white;
+  color: #0b4c55;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
